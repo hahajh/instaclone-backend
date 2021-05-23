@@ -4,17 +4,28 @@ const resolver: Resolvers = {
     Query: {
         searchUsers: async (
             _,
-            { keyword },
+            { keyword, page },
             { client }
         ) => {
+            if (keyword.length < 3) {
+                return {
+                    ok: false,
+                    error: "Keyword is too short"
+                }
+            }
             const users = await client.user.findMany({
+                take: 5,
+                skip: (page - 1) * 5,
                 where: {
                     username: {
                         startsWith: keyword.toLowerCase()
                     }
                 }
             });
-            return users;
+            return {
+                ok: true,
+                users
+            };
         }
     }
 }
