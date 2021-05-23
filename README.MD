@@ -7,9 +7,8 @@
 - [x] Login
 - [x] Edit Profile
 - [x] Change avartar (Image Upload)
-- [ ] Follow User
-- [ ] Unfollow User
-- [ ] Change avartar
+- [x] Follow User
+- [x] Unfollow User
+- [x] Change avartar
+- [ ] See Followers and Following
 - [ ] Search Users
-- [ ] See Followers
-- [ ] See Following

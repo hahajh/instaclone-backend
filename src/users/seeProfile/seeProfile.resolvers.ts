@@ -6,6 +6,10 @@ const resolvers: Resolvers = {
             client.user.findUnique({
                 where: {
                     username
+                },
+                include: {
+                    following: true,
+                    followers: false,
                 }
             })
     }
