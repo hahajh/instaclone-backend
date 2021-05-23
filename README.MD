@@ -13,4 +13,4 @@
 - [x] See Followers w/ offset pagination (ref : https://www.prisma.io/docs/concepts/components/prisma-client/pagination)
 - [x] See Following w/ cursor paginantion 
 - [x] Computed fields
-- [ ] Search Users
+- [x] Search Users
