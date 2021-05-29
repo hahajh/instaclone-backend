@@ -14,3 +14,9 @@
 - [x] See Following w/ cursor paginantion 
 - [x] Computed fields
 - [x] Search Users
+
+## Photos 
+- [x] Upload Photo (Parse #)
+- [x] See Photo
+- [ ] See Hashtags
+  
