@@ -15,6 +15,31 @@ export default {
                     }
                 }
             }),
-        likes: ({ id }) => client.like.count({ where: { photoId: id } })
+        likes: ({ id }) => client.like.count({ where: { photoId: id } }),
+        comments: ({ id }) => client.comment.count({ where: { photoId: id } }),
+        isMine: ({ userId }, _: any, { loggedInUser }) => {
+            if (!loggedInUser) {
+                return false;
+            }
+            return userId === loggedInUser.id;
+        }
+    },
+    Hashtag: {
+        photos: ({ id }) => {
+            return client.hashtag.findUnique({
+                where: {
+                    id
+                }
+            }).photos()
+        },
+        totalPhotos: ({ id }) => client.photo.count({
+            where: {
+                hashtags: {
+                    some: {
+                        id
+                    }
+                }
+            }
+        })
     }
 }

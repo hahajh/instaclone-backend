@@ -24,11 +24,16 @@
 - [x] Like / Unlike Photo
 - [x] See Photo Likes
 - [x] See Feed
+- [x] See Photo Comments
+- [x] Is Mine 
+- [ ] Delete Photo
 
 ## Comments
 
-- [ ] Comment on Photo
+- [x] Comment on Photo
 - [ ] Edit Comment
+- [ ] Is Mine
 - [ ] Delete Comment
 
-  
+## Extras 
+- [ ] SJ image upload
