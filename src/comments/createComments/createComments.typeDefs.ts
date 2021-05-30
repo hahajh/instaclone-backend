@@ -1,11 +1,7 @@
 import { gql } from "apollo-server-express";
 
-export default gql`
-    type CreateCommentResult {
-        ok : Boolean!
-        error: String
-    }
+export default gql` 
     type Mutation {
-        createComment(photoId: Int!, payload: String!): CreateCommentResult!
+        createComment(photoId: Int!, payload: String!): MutationResponse!
     }
 `;

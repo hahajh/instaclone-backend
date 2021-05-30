@@ -33,7 +33,7 @@
 - [x] Comment on Photo
 - [x] Is Mine
 - [x] Delete Comment
-- [ ] Edit Comment
+- [x] Edit Comment
 
 ## Extras 
 - [ ] SJ image upload
