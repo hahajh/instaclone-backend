@@ -18,5 +18,10 @@
 ## Photos 
 - [x] Upload Photo (Parse #)
 - [x] See Photo
-- [ ] See Hashtags
+- [x] See Hashtags
+- [x] Searh Photos
+- [x] Edit Photo
+- [x] Like / Unlike Photo
+- [ ] See Photo Likes
+- [ ] See Feed
   
