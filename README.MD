@@ -22,6 +22,13 @@
 - [x] Searh Photos
 - [x] Edit Photo
 - [x] Like / Unlike Photo
-- [ ] See Photo Likes
-- [ ] See Feed
+- [x] See Photo Likes
+- [x] See Feed
+
+## Comments
+
+- [ ] Comment on Photo
+- [ ] Edit Comment
+- [ ] Delete Comment
+
   
