@@ -36,4 +36,4 @@
 - [x] Edit Comment
 
 ## Extras 
-- [x] SJ image upload
+- [x] S3 image upload
