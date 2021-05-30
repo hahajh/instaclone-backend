@@ -26,14 +26,14 @@
 - [x] See Feed
 - [x] See Photo Comments
 - [x] Is Mine 
-- [ ] Delete Photo
+- [x] Delete Photo
 
 ## Comments
 
 - [x] Comment on Photo
+- [x] Is Mine
+- [x] Delete Comment
 - [ ] Edit Comment
-- [ ] Is Mine
-- [ ] Delete Comment
 
 ## Extras 
 - [ ] SJ image upload
