@@ -1,4 +1,5 @@
 require('dotenv').config();
+import * as http from "http"
 import * as express from "express";
 import { ApolloServer } from "apollo-server-express";
 import * as logger from "morgan";
@@ -10,18 +11,42 @@ const PORT = process.env.PORT;
 const apollo = new ApolloServer({
     resolvers,
     typeDefs,
-    context: async ({ req }) => {
-        return {
-            loggedInUser: await getUser(req.headers.token),
-            client
+    context: async (ctx) => {
+        if (ctx.req) {
+            return {
+                loggedInUser: await getUser(ctx.req.headers.token),
+                client
+            }
+        } else {
+            const {
+                connection: { context },
+            } = ctx;
+            return {
+                loggedInUser: context.loggedInUser,
+                client
+            }
+        }
+    },
+    subscriptions: {
+        onConnect: async function (params: any) {
+            if (!params.token) {
+                throw new Error("You can't listen");
+            }
+            return {
+                loggedInUser: await getUser(params.token)
+            };
         }
     }
 });
 
 const app = express();
 app.use(logger("tiny"));
-app.use("/static", express.static("uploads"));
 apollo.applyMiddleware({ app });
-app.listen({ port: PORT }, () => {
+app.use("/static", express.static("uploads"));
+
+const httpServer = http.createServer(app);
+apollo.installSubscriptionHandlers(httpServer);
+
+httpServer.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

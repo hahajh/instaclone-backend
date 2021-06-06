@@ -37,3 +37,12 @@
 
 ## Extras 
 - [x] S3 image upload
+
+## DMs
+
+- [x] See Room
+- [x] Send meessage (Create Room)
+- [x] See Rooms
+- [x] Computed field
+- [x] See Message
+- [ ] Relatime messages
